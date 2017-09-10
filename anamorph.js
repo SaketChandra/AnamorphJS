@@ -1,19 +1,19 @@
 function cylinderical(im,target,R,theta) {
 
-M = im.width;
-N = im.height;
-mrows=2*(R+M);
-ncols=2*(R+M);
+	M = im.width;
+	N = im.height;
+	mrows=2*(R+M);
+	ncols=2*(R+M);
 
 	var element1 = document.createElement('canvas');
-    c1 = element1.getContext("2d");
+ 	c1 = element1.getContext("2d");
 	element1.width=M;
 	element1.height=N;
 	c1.drawImage(im, 0, 0);
-    imageData1 = c1.getImageData(0, 0, M, N);
+    	imageData1 = c1.getImageData(0, 0, M, N);
 
 	var element2 = document.createElement('canvas');
-    c2 = element2.getContext("2d");
+	c2 = element2.getContext("2d");
 	element2.width=mrows;
 	element2.height=ncols;
 	c2.fillStyle = "blue";
@@ -52,22 +52,22 @@ function conical(im,target,R,theta) {
 
 
 
-M = im.width;
-N = im.height;
-r=(R+R/Math.sin((theta/2)*(Math.PI/180)));
-mrows=2*r;
-ncols=2*r;
-L=(1/2)*Math.sqrt((M*M)+(N*N));
+	M = im.width;
+	N = im.height;
+	r=(R+R/Math.sin((theta/2)*(Math.PI/180)));
+	mrows=2*r;
+	ncols=2*r;
+	L=(1/2)*Math.sqrt((M*M)+(N*N));
 
 	var element1 = document.createElement('canvas');
-    c1 = element1.getContext("2d");
-    element1.width=M;
+   	c1 = element1.getContext("2d");
+   	element1.width=M;
 	element1.height=N;
 	c1.drawImage(im, 0, 0);
-    imageData1 = c1.getImageData(0, 0, M, N);
+  	imageData1 = c1.getImageData(0, 0, M, N);
 
 	var element2 = document.createElement('canvas');
-    c2 = element2.getContext("2d");
+ 	c2 = element2.getContext("2d");
 	element2.width=mrows;
 	element2.height=ncols;
 	c2.fillStyle = "blue";
@@ -119,7 +119,7 @@ function copyPixel(oux,ouy,inx,iny) {
 function LoadImage(target,canvas) {
 	
 	var x = document.createElement("IMG");
-    x.setAttribute("src", canvas.toDataURL());
+  	x.setAttribute("src", canvas.toDataURL());
    
 	var target = document.getElementById("target");  
 	id="target"
