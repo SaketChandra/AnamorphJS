@@ -16,8 +16,6 @@ function cylinderical(im,target,R,theta) {
 	c2 = element2.getContext("2d");
 	element2.width=mrows;
 	element2.height=ncols;
-	c2.fillStyle = "blue";
-	c2.fillRect(0, 0, mrows, ncols);
 	imageData2 = c2.createImageData(mrows, ncols);
 	
 	for(i=1;i<=M;i++){
@@ -70,8 +68,6 @@ function conical(im,target,R,theta) {
  	c2 = element2.getContext("2d");
 	element2.width=mrows;
 	element2.height=ncols;
-	c2.fillStyle = "blue";
-	c2.fillRect(0, 0, mrows, ncols);
 	imageData2 = c2.createImageData(mrows, ncols);
 	
 	for(i=R+1;i<=r;i++){
